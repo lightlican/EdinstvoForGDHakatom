@@ -20605,6 +20605,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 60bcc4d11c95a794c8fe0b4103d1e25b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0e03beefb56b89243913157706ffb608, type: 2}
     - target: {fileID: 919132149155446097, guid: 60bcc4d11c95a794c8fe0b4103d1e25b, type: 3}
       propertyPath: m_Name
       value: tatar

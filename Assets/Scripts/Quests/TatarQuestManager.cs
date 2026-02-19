@@ -87,5 +87,10 @@ public class TatarQuestManager : MonoBehaviour
         {
             elderDialogue.OnQuestCompleted();
         }
+
+        if (Journal.Instance != null)
+        {
+            Journal.Instance.AddFact("Татары: Сабантуй — праздник плуга, внесён в список наследия ЮНЕСКО. Это праздник силы, ловкости и единства общины.");
+        }
     }
 }

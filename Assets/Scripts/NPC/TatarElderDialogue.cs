@@ -78,11 +78,12 @@ public class TatarElderDialogue : MonoBehaviour
             EndDialogue();
             return;
         }
-
         
+
         DialogueUI.Instance.ShowDialogue(speakerName, currentDialogue[0], icon);
         PlayVoice(0);
     }
+
 
     void ShowNextLine()
     {
@@ -117,13 +118,13 @@ public class TatarElderDialogue : MonoBehaviour
         DialogueUI.Instance.HideDialogue();
         audioSource.Stop();
 
-        // «апускаем квест после первого диалога
         if (!questGiven && questManager != null)
         {
             questGiven = true;
             questManager.StartQuest();
-
         }
+
+        
     }
 
     public void OnQuestCompleted()
@@ -147,5 +148,9 @@ public class TatarElderDialogue : MonoBehaviour
             playerInRange = false;
             if (isTalking) EndDialogue();
         }
+    }
+    public bool IsQuestCompleted()
+    {
+        return questCompleted;
     }
 }

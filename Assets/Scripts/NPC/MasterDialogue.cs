@@ -145,6 +145,11 @@ public class MasterDialogue : MonoBehaviour
             if (credits != null)
                 credits.StartCredits();
         }
+
+        if (finalTriggered && Journal.Instance != null)
+        {
+            Journal.Instance.AddFact("Мастер: Единство народов — великая сила");
+        }
     }
 
     void OnTriggerEnter(Collider other)

@@ -174,6 +174,14 @@ public class ShamanDialogue : MonoBehaviour
             questGiven = true;
             questManager.StartQuest();
         }
+
+        if (questManager != null && questManager.IsQuestCompleted())
+        {
+            if (Journal.Instance != null)
+            {
+                Journal.Instance.AddFact("Ѕур€ты: Ўаманский бубен Ч это цела€ вселенна€: обод символизирует мироздание, руко€ть Ч ось мира, а рисунки изображают духов-помощников.");
+            }
+        }
     }
 
     public void OnQuestCompleted()

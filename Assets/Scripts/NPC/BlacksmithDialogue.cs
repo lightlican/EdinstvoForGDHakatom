@@ -132,6 +132,13 @@ public class BlacksmithDialogue : MonoBehaviour
             questGiven = true;
             questManager.StartQuest();
         }
+        if (questManager != null && questManager.IsQuestCompleted())
+        {
+            if (Journal.Instance != null)
+            {
+                Journal.Instance.AddFact("Русские: Подкова — символ счастья, вешали концами вверх, чтобы счастье не вытекало. Кузнецов считали колдунами, умеющими укрощать огонь.");
+            }
+        }
     }
 
     public void OnQuestCompleted()

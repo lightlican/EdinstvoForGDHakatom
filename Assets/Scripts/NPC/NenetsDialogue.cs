@@ -164,6 +164,14 @@ public class NenetsDialogue : MonoBehaviour
                 questManager.FinalDialogue();
             }
         }
+        if (questManager != null && questManager.IsQuestCompleted())
+        {
+            if (Journal.Instance != null)
+            {
+                Journal.Instance.AddFact("Ненцы: Олень для северных народов — не просто животное, а основа жизни: транспорт, пища, одежда и жильё. Тотемные столбы — связь между миром людей и миром духов.");
+            }
+        }
+
     }
 
     public void OnQuestCompleted()
